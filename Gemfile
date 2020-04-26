@@ -30,6 +30,10 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails', '4.3.1'
+gem 'devise'
+gem 'omniauth-facebook'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
 
 
 # Use Capistrano for deployment
