@@ -9,6 +9,21 @@
   </head>
 
   <body>
+    <% if user_signed_in? %>
+      <header>
+        <div class="header-nav">
+          <div class="home-icon">
+            <%= link_to "InstaClone", root_url, class: "top-icon" %>
+          </div>
+          <div class="nav nav-bar">
+            <nav>
+              <%= link_to current_user.username, user_path(current_user) %>
+              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            </nav>
+          </div>
+        </div>
+      </header>
+    <% end %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>

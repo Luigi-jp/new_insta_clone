@@ -1,0 +1,36 @@
+<div class="main show">
+  <div class="container">
+    <div class="profile">
+      <div class="user-header">
+        <div class="user-icon">
+          画像
+        </div>
+        <div class="profile-info">
+          <div class="profile-top">
+            <h2><%= @user.username %></h2>
+            <div class="profile-link">
+              <% if @user == current_user %>
+                <%= link_to "プロフィールを編集", '#', class: "btn page-link text-dark d-inline-block default" %>
+              <% else %>
+                <%= link_to "フォロー", '#'%> <!-- #render --> 
+              <% end %>
+            </div>
+            
+          </div>
+          <div class="status">
+              <p>投稿０件</p>
+              <P>フォロワー<%= link_to "0", '#' %>人</P>
+              <P>フォロー<%= link_to "0", '#' %>人</P>
+          </div>
+          <div class="introduction">
+            <%= @user.introduction %>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    <div>
+      <!--Post-->
+    </div>
+  </div>
+</div>
