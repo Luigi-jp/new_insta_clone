@@ -10,7 +10,7 @@
             <h2><%= @user.username %></h2>
             <div class="profile-link">
               <% if @user == current_user %>
-                <%= link_to "プロフィールを編集", '#', class: "btn page-link text-dark d-inline-block default" %>
+                <%= link_to "プロフィールを編集", edit_user_registration_path, class: "btn page-link text-dark d-inline-block default" %>
               <% else %>
                 <%= link_to "フォロー", '#'%> <!-- #render --> 
               <% end %>

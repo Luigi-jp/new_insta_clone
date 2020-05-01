@@ -101,3 +101,67 @@ header {
     margin-right: 40px;
   }
 }
+
+/* ------------- edit --------------*/
+.edit-card {
+  background-color: #fff;
+  text-align: center;
+  padding: 32px 0;
+  border: 1px solid #ddd;
+  .personal-info {
+    color: #c0c0c0;
+    text-align: left;
+    margin-left: 215px;
+    margin-top: 10px;
+    h4 {
+      font-size: 14px;
+    }
+    p {
+      font-size: 12px;
+    }
+  }
+  form {
+    margin: 16px 0;
+    .field {
+      margin-bottom: 16px;  
+      padding-right: 150px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-start;
+    }
+    label {
+      padding: 0 32px;
+      font-weight: bold;
+    }  
+    input, textarea {
+      width: 330px;
+      border-radius: 5px;
+    }
+  }
+}
+
+/* ---------- change password ----------------*/
+.password-card {
+  background-color: #fff;
+  padding: 32px 0;
+  text-align: center;
+  border: 1px solid #ddd;
+  form {
+    margin-top: 20px;
+    .field {
+      margin-bottom: 16px;
+      padding-right: 150px;
+      display: flex;
+      justify-content: flex-end;
+      height: 40px;
+      label {
+        padding: 0 32px;
+        font-weight: bold;
+      }
+      input {
+        width: 330px;
+        border-radius: 5px;
+      }
+    }
+  }
+}

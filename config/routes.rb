@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
+  
+  devise_scope :user do
+    get 'change', to: 'users/registrations#change'
+  end
+  
   root 'pages#index'
   resources :users, only: :show
 
