@@ -31,4 +31,5 @@ RSpec.describe User, type: :model do
       password: "password")
     expect(@user).to_not be_valid
   end
+  
 end

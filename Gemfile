@@ -48,6 +48,7 @@ group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3',  '1.3.13'
   gem 'rspec-rails', '~> 3.6.0'
+  gem 'factory_bot_rails', '~> 4.10.0'
 end
 
 group :development do
