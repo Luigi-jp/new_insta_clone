@@ -18,7 +18,7 @@
             
           </div>
           <div class="status">
-              <p>投稿０件</p>
+              <p>投稿<span class="sum"><%= @user.posts.count %></span>件</p>
               <P>フォロワー<%= link_to "0", '#' %>人</P>
               <P>フォロー<%= link_to "0", '#' %>人</P>
           </div>
@@ -27,10 +27,11 @@
           </div>
         </div>
       </div>
-      
     </div>
-    <div>
-      <!--Post-->
+    <div class="user-posts">
+      <div class="post-list">
+        <%= render @posts %>
+      </div>
     </div>
   </div>
 </div>

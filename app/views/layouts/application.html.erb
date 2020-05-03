@@ -27,5 +27,10 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
+    <% if user_signed_in? %>
+      <footer>
+        <%= link_to "写真をアップロード", new_post_path %>
+      </footer>
+    <% end %>
   </body>
 </html>
