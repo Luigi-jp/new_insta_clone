@@ -47,6 +47,20 @@ footer {
   font-family: cursive;
 }
 
+/* ------------- home --------------*/
+.item {
+  margin: 0 57px;
+  margin-bottom: 60px;
+  border: 1px solid #e8e8e8;
+  .feed-header {
+    background-color: #FFF;
+    height: 60px;
+    padding: 16px;
+    text-align: left;
+  }
+}
+
+
 /* ------------- sign-up --------------*/
 .sign-form {
   h1 {

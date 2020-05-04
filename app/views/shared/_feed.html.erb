@@ -1,0 +1,21 @@
+<div class="article">
+  <% @feed_items.each do |feed_item| %>
+    <div class="item">
+      <div class="feed-header">
+        <%= feed_item.user.username %>
+      </div>
+      <div class="article-img">
+        <%= image_tag feed_item.picture.url %>
+      </div>
+      <div class="etc">
+        <div>
+          いいね
+        </div>
+        <div>
+          コメント
+        </div>
+      </div>
+    </div>
+    
+  <% end %>
+</div>
