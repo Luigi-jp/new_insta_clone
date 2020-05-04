@@ -12,15 +12,15 @@
               <% if @user == current_user %>
                 <%= link_to "プロフィールを編集", edit_user_registration_path, class: "btn page-link text-dark d-inline-block default" %>
               <% else %>
-                <%= link_to "フォロー", '#'%> <!-- #render --> 
+                <%= render 'follow_form' %>
               <% end %>
             </div>
             
           </div>
           <div class="status">
               <p>投稿<span class="sum"><%= @user.posts.count %></span>件</p>
-              <P>フォロワー<%= link_to "0", '#' %>人</P>
-              <P>フォロー<%= link_to "0", '#' %>人</P>
+              <P>フォロワー<strong id="followers"><%= link_to @user.followers.count, '#', class: "sum" %></strong>人</P>
+              <P>フォロー<strong id="following"><%= link_to @user.following.count, '#', class: "sum" %></strong>人</P>
           </div>
           <div class="introduction">
             <%= @user.introduction %>
