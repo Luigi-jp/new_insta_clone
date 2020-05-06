@@ -7,6 +7,9 @@ class User < ApplicationRecord
          
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :favorites, dependent: :destroy
+  has_many :good_posts, through: :favorites,
+                         source: :post
   has_many :active_relationships, class_name: "Relationship",
                                  foreign_key: "follower_id",
                                    dependent: :destroy
@@ -37,5 +40,17 @@ class User < ApplicationRecord
   
   def following?(other_user)
     following.include?(other_user)
+  end
+  
+  def favorite(post)
+    good_posts << post
+  end
+  
+  def unfavorite(post)
+    favorites.find_by(post_id: post.id).destroy
+  end
+  
+  def favorite?(post)
+    good_posts.include?(post)
   end
 end

@@ -1,0 +1,7 @@
+<div id=<%= "favorite_form-#{feed_item.id}" %>>
+  <% if current_user.favorite?(feed_item) %>
+    <%= render 'shared/unfavorite', { feed_item: feed_item } %>
+  <% else %>
+    <%= render 'shared/favorite', { feed_item: feed_item } %>
+  <% end %>
+</div>
