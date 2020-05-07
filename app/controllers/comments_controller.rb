@@ -4,6 +4,7 @@ class CommentsController < ApplicationController
   def create
     @comment = current_user.comments.build(comment_params)
     if @comment.save
+      @comment.create_comment_notification(current_user)
       redirect_to request.referrer || root_url
     else
       redirect_to root_url

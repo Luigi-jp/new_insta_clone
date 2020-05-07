@@ -1,0 +1,5 @@
+<% if check_notification.blank? %>
+  <%= link_to icon("far", "bell"), notifications_path %>
+<% else %>
+  <%= link_to icon("fas", "bell"), notifications_path %>
+<% end %>

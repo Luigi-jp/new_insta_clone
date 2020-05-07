@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   
-
   devise_for :users, controllers: {
     registrations: 'users/registrations'
   }
@@ -15,6 +14,7 @@ Rails.application.routes.draw do
   resources :relationships, only: [:create, :destroy]
   resources :comments, only: [:create, :destroy]
   resources :favorites, only: [:create, :destroy]
+  resources :notifications, only: :index
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

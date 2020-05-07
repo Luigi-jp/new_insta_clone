@@ -1,4 +1,6 @@
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 /* ------------- univ ----------------*/
 body {
@@ -258,5 +260,17 @@ footer {
         border-radius: 5px;
       }
     }
+  }
+}
+
+/* ---------- notifications ---------------*/
+.notification {
+  height: 70px;
+  border-bottom: 1px solid #e8e8e8;
+  line-height: 70px;
+  padding-left: 20px;
+  .visitor {
+    font-weight: bold;
+    color: #000;
   }
 }

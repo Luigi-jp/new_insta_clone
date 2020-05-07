@@ -1,0 +1,12 @@
+<div class="main notifications">
+  <div class="container">
+    <div class="notication-feed">
+      <% if @notifications.any? %>
+        <%= render @notifications %>
+      <% else %>
+        <h2>通知はありません</h2>
+      <% end %>
+    </div>
+  </div>
+</div>
+

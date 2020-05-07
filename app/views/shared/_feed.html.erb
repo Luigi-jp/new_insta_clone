@@ -28,15 +28,7 @@
             <% end %>
           </div>
           <div class="comment_form">
-            <%= form_for(@comment) do |f| %>
-              <%= f.hidden_field :post_id, value: feed_item.id %>
-              <div class="content-form">
-                <%= f.text_field :content, placeholder: "コメントを追加..." %>
-              </div>
-              <div class="submit-btn">
-                <%= f.submit "投稿する", class: "btn" %>
-              </div>
-            <% end %>
+            <%= render 'shared/comment_form', {feed_item: feed_item } %>
           </div>
         </div>
       </div>

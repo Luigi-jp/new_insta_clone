@@ -1,0 +1,10 @@
+<div class="notification">
+  <% case notification.action %>
+    <% when "good" %>
+      <%= link_to notification.visitor.username, user_path(notification.visitor), class: "visitor" %>
+      があなたの投稿にいいねしました。
+    <% when "comment" %>
+      <%= link_to notification.visitor.username, user_path(notification.visitor), class: "visitor" %>
+      があなたの投稿にコメントしました。
+  <% end %>
+</div>

@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap', '~> 4.1.1'
+gem 'font-awesome-sass', '~> 5.12.0'
 gem 'jquery-rails', '4.3.1'
 gem 'devise'
 gem 'omniauth-facebook'
@@ -36,6 +37,7 @@ gem 'devise-i18n'
 gem 'devise-i18n-views'
 gem 'carrierwave',  '1.2.2'
 gem 'mini_magick',  '4.7.0'
+
 
 
 # Use Capistrano for deployment
