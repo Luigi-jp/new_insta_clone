@@ -1,0 +1,6 @@
+<%= form_tag(search_path, method: :get) do %>
+  <%= text_field_tag :search %>
+  <%= button_tag type: "submit", class: "btn" do %>
+    <i class="fas fa-search"></i>
+  <% end %>
+<% end %>

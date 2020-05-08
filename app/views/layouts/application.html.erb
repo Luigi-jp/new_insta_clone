@@ -15,6 +15,9 @@
           <div class="home-icon">
             <%= link_to "InstaClone", root_url, class: "top-icon" %>
           </div>
+          <div class="search-form">
+            <%= render 'shared/search-form' %>
+          </div>
           <div class="nav nav-bar">
             <nav>
               <%= link_to current_user.username, current_user %>

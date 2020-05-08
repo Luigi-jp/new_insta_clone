@@ -1,0 +1,9 @@
+<div class="main search">
+  <div class="container">
+    <% if @users.any? %>
+      <%= render @users %>
+    <% else %>
+      一致する結果はありません
+    <% end %>
+  </div>
+</div>

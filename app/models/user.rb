@@ -59,4 +59,8 @@ class User < ApplicationRecord
   def favorite?(post)
     good_posts.include?(post)
   end
+  
+  def self.search(search)
+    User.where('username LIKE ?', search)
+  end
 end

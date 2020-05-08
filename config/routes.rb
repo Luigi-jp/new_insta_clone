@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   end
   
   root 'pages#index'
+  get '/search', to: 'users#search'
   resources :users, only: :show
   resources :posts, only: [:new, :create, :destroy]
   resources :relationships, only: [:create, :destroy]

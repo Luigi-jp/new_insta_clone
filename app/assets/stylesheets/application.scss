@@ -50,6 +50,18 @@ header {
     margin: 0 150px;
     padding: 0 15px;
   }
+  .search-form {
+    padding-top: 15px;
+    form {
+      display: flex;
+      input {
+        height: 28px;
+      }
+      button {
+        padding-top: 3px;
+      }
+    }
+  }
 }
 
 footer {
@@ -293,5 +305,14 @@ footer {
   .visitor {
     font-weight: bold;
     color: #000;
+  }
+}
+
+/* ------------ search ------------*/
+.search-user {
+  display: flex; 
+  border-bottom: 1px solid #e8e8e8;
+  .user-name {
+    margin-left: 20px;
   }
 }

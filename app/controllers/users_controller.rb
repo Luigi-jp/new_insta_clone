@@ -5,4 +5,8 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     @posts = @user.posts
   end
+  
+  def search
+    @users = User.search(params[:search])
+  end
 end
