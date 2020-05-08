@@ -19,7 +19,7 @@
             <nav>
               <%= link_to current_user.username, current_user %>
               <%= render 'shared/notice' %>
-              <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+              <%= link_to icon("fas", "sign-out-alt"), destroy_user_session_path, method: :delete %>
             </nav>
           </div>
         </div>

@@ -1,4 +1,6 @@
 <%= form_for(current_user.favorites.find_by(post_id: feed_item.id),
              html: { method: :delete }, remote: true) do |f| %>
-  <%= f.submit "いいね解除", class: "btn" %>
+  <%= button_tag type: "submit", class: "btn" do %>
+    <i class="fas fa-heart"></i>
+  <% end %>
 <% end %>

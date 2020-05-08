@@ -11,6 +11,24 @@ body {
   margin-bottom: 20px;
 }
 
+
+/* ------------icon -----------------*/
+.fa-heart {
+  color: #ff006f;
+}
+
+.fa-trash-alt {
+  color: #000;
+}
+
+.fa-bell {
+  color: #000;
+}
+
+.fa-sign-out-alt {
+  color: #000;
+}
+
 /* ------------ header ---------------*/
 header {
   background-color: #fff;
@@ -62,12 +80,15 @@ footer {
   }
   .etc {
     background-color: #FFF;
-    .favorite {
-      height: 40px;
-      paddhing: 0 16px;
-      text-align: left;
-      .comment {
-        font-size: 14px;
+    .icon-nav {
+      display: flex;
+      .favorite {
+        height: 40px;
+        text-align: left;
+      }
+      .post-delete {
+        width: 42px;
+        line-height: 40px;
       }
     }
     .comments {
