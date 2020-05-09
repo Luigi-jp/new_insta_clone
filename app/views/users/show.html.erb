@@ -19,8 +19,19 @@
           </div>
           <div class="status">
               <p>投稿<span class="sum"><%= @user.posts.count %></span>件</p>
-              <P>フォロワー<strong id="followers"><%= link_to @user.followers.count, '#', class: "sum" %></strong>人</P>
-              <P>フォロー<strong id="following"><%= link_to @user.following.count, '#', class: "sum" %></strong>人</P>
+              <P>
+                フォロワー
+                <button type="button" id="followers" name="follower" value="フォロワー" data-toggle="modal" data-target="#followerModal">
+                  <%= @user.followers.count %>
+                </button>
+                人
+              </P>
+              <P>フォロー
+                <button type="button" id="following" name="follow" value="フォロー" data-toggle="modal" data-target="#followModal">
+                  <%= @user.following.count %>
+                </button>
+                人
+              </P>
           </div>
           <div class="introduction">
             <%= @user.introduction %>
@@ -35,3 +46,11 @@
     </div>
   </div>
 </div>
+
+<div class="modal fade followModal" id="followerModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <%= render 'relationships/follower_modal.html.erb' %>
+</div>  
+
+<div class="modal fade followModal" id="followModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+  <%= render 'relationships/follow_modal.html.erb' %>
+</div>  

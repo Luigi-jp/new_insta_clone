@@ -1,0 +1,20 @@
+<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+  <div class="modal-content">
+    <div class="row">
+      <div class="col-7">
+        <%= image_tag post.picture.url %>
+      </div>
+      <div class="col-5">
+        <div class="modal-post-user">
+          <%= post.user.username %>
+        </div>
+        <% post.comments.each do |comment| %>
+          <div class="modal-comment">
+            <div><%= comment.user.username %></div>
+            <div><%= comment.content %></div>
+          </div>
+         <% end %>
+      </div>
+    </div>
+  </div>
+</div>

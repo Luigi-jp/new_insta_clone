@@ -1,3 +1,9 @@
 <div class="post">
-  <%= image_tag post.picture.url %>  
+  <button type="button" class="btn" data-toggle="modal" data-target="#<%= "postModal-#{post.id}" %>">
+    <%= image_tag post.picture.url %>  
+  </button>
+  
+  <div class="modal fade postModal" id=<%= "postModal-#{post.id}" %> tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <%= render 'posts/post_modal', {post: post} %>
+  </div>
 </div>
