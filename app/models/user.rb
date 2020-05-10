@@ -29,6 +29,23 @@ class User < ApplicationRecord
   validates :fullname, presence: true
   validates :username, presence: true, uniqueness: true
   
+  def self.find_for_oauth(auth)
+    user = User.where(uid: auth.uid, provider: auth.provider).first
+
+    unless user
+      user = User.create(
+        uid:      auth.uid,
+        provider: auth.provider,
+        email:    auth.info.email,
+        username:  auth.info.name,
+        fullname: auth.info.name,
+        password: Devise.friendly_token[0, 20]
+      )
+    end
+
+    user
+  end
+  
   def feed
     following_ids = "SELECT followed_id FROM relationships
                      WHERE follower_id = :user_id"
