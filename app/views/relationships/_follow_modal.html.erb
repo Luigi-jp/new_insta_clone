@@ -9,7 +9,12 @@
     <div class="modal-body">
       <% @user.following.each do |follow| %>
         <div class="follow-user">
-          <%= follow.username %>
+          <div class="user-icon-mini">
+            <%= image_tag follow.image.url %>
+          </div>
+          <div>
+            <%= link_to follow.username, follow %>
+          </div>
         </div>
       <% end %>
     </div>

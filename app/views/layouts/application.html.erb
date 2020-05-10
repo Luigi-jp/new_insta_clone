@@ -20,7 +20,7 @@
           </div>
           <div class="nav nav-bar">
             <nav>
-              <%= link_to current_user.username, current_user %>
+              <%= link_to (image_tag current_user.image.url), current_user, class: "user-icon-mini" %>
               <%= render 'shared/notice' %>
               <%= link_to icon("fas", "sign-out-alt"), destroy_user_session_path, method: :delete %>
             </nav>

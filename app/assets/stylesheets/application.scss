@@ -29,6 +29,14 @@ body {
   color: #000;
 }
 
+.user-icon-mini {
+  img {
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+  }
+}
+
 /* ------------ header ---------------*/
 header {
   background-color: #fff;
@@ -64,6 +72,13 @@ header {
   }
 }
 
+.nav {
+  a {
+    margin-right: 15px;
+  }  
+}
+
+
 footer {
   text-align: right;
   margin: 0 150px;
@@ -89,6 +104,11 @@ footer {
     height: 60px;
     padding: 16px;
     text-align: left;
+    a {
+      display: inline-block;
+      margin-left: 10px;
+      color: #000;
+    }
   }
   .etc {
     background-color: #FFF;
@@ -108,9 +128,13 @@ footer {
         padding: 0 16px;
         .comment {
           display: flex;
-          strong, p {
+          p {
             font-size: 14px;
             padding-left: 5px;
+            a {
+              color: #000;
+              font-weight: bold;
+            }
           }
           .content {
             width: 500px;
@@ -186,7 +210,10 @@ footer {
   justify-content: center;
 }
 .user-icon {
-  margin-right: 30px;
+  margin-right: 70px;
+  img {
+    border-radius: 50%;
+  }
 }
 .profile-top {
   display: flex;
@@ -250,12 +277,28 @@ footer {
     border-bottom: 1px solid #e8e8e8;
     margin-bottom: 5px;
     text-align: left;
-    height: 40px;
-    line-height: 40px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    .user-icon-mini {
+      img {
+        height: 28px;
+        width: 28px;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 20px;
+      }
+    } 
   }
   .modal-comment {
     display: flex;
     padding: 10px;
+    a {
+      display: inline-block;
+      margin-right: 15px;
+      font-weight: bold;
+      color: #000;
+    }
   }
 }
 
@@ -263,6 +306,14 @@ footer {
   .follow-user {
     height: 30px;
     padding: 8px 16px;
+    display: flex;
+    margin-bottom: 10px;
+    a {
+      font-weight: bold;
+      color: #000;
+      display: inline-block;
+      margin-left: 20px;
+    }
   }
 }
 
@@ -272,6 +323,13 @@ footer {
   text-align: center;
   padding: 32px 0;
   border: 1px solid #ddd;
+  .user-icon-md {
+   img {
+     height: 70px;
+     width: 70px;
+     border-radius: 50%;
+   } 
+  }
   .personal-info {
     color: #c0c0c0;
     text-align: left;

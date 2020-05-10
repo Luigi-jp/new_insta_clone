@@ -59,7 +59,8 @@ class Users::RegistrationsController < Devise::RegistrationsController
                                                               :website,
                                                               :introduction,
                                                               :phone,
-                                                              :sex])
+                                                              :sex,
+                                                              :image])
   end
 
   # The path used after sign up.

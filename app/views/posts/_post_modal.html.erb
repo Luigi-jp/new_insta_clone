@@ -6,11 +6,14 @@
       </div>
       <div class="col-5">
         <div class="modal-post-user">
-          <%= post.user.username %>
+          <div class="user-icon-mini">
+            <%= image_tag post.user.image.url %>
+            <%= post.user.username %>
+          </div>
         </div>
         <% post.comments.each do |comment| %>
           <div class="modal-comment">
-            <div><%= comment.user.username %></div>
+            <div><%= link_to comment.user.username, comment.user %></div>
             <div><%= comment.content %></div>
           </div>
          <% end %>

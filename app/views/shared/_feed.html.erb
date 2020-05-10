@@ -1,8 +1,9 @@
 <div class="article">
   <% @feed_items.each do |feed_item| %>
     <div class="item">
-      <div class="feed-header">
-        <%= feed_item.user.username %>
+      <div class="feed-header user-icon-mini">
+        <%= image_tag feed_item.user.image.url %>
+        <%= link_to feed_item.user.username, feed_item.user %>
       </div>
       <div class="article-img">
         <%= image_tag feed_item.picture.url %>
@@ -23,7 +24,7 @@
           <div class="comment-item">
             <% feed_item.comments.each do |comment| %>
             <div class="comment">
-              <strong><%= comment.user.username %></strong>
+              <p><%= link_to comment.user.username, comment.user %></p>
               <p class="content"><%= comment.content %></p>
               <p class="delete">
                 <% if current_user == comment.user %>
