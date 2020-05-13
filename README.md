@@ -1,24 +1,15 @@
-# README
+いくつか未実装の部分やテストが不十分な点がありますが、目安の２週間が経過しましたので、提出させていただきます。
+ご確認お願い致します。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+１.苦労した点
+  サブ課題全体を通して、deviseの仕様やモーダルの表示方法など実装を進めていく上でわからないことだらけでした。
+  そういった状況で自分で１から全部調べ、１つ１つコツコツを実装を進めていくことが１番苦労しました。
+  
+2.学んだ点
+  自分で１からアプリを作成したことで、rails tutorialを終えた時よりもよりrailsによるアプリ開発に方法が理解できた気がします。
+  また、エラーに遭遇したの原因の調べ方や考え方も成長したと思います。
+  
+3. 自慢したい点
+   テストがほとんど書けなかった、herokuにデプロイしたあとにfacebookログインがうまく動かなくなってしまい、まだ解決できていないなどはありますが、
+   ローカル上では１通り機能の実装を完了することができたことです。
+   また、デザインも少しこだわり、できるだけ本物に似せてみました。
