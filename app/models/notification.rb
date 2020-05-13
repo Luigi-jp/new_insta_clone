@@ -4,5 +4,7 @@ class Notification < ApplicationRecord
   belongs_to :post, optional: true
   belongs_to :comment, optional: true
   
+  validates :action, presence: true
+  
   default_scope -> { order(created_at: :desc) }
 end
