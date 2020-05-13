@@ -1,6 +1,6 @@
 <div class="search-user">
-  <div class="user-image">
-    <h2>画像</h2>
+  <div class="user-icon">
+    <%= image_tag user.image.url %>
   </div>
   <div class=user-name>
     <h2><%= link_to user.username, user %></h2>
